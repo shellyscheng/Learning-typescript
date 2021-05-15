@@ -12,3 +12,10 @@ function doSomething() {
     console.log("Finally:" + i);
 }
 doSomething();
+//Typescript types
+var a;
+var b;
+var c;
+var d;
+var e; //array of numbers or let e: number[] = [1, 2, 3];
+var f = [1, true, 'a', false]; //not good practice, but it's possible

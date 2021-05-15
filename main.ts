@@ -18,3 +18,12 @@ function doSomething() {
 }
 
 doSomething();
+
+
+//Typescript types
+let a: number;
+let b: boolean;
+let c: string;
+let d: any;
+let e: number[]; //array of numbers or let e: number[] = [1, 2, 3];
+let f: any[] = [1, true, 'a', false]; //not good practice, but it's possible
