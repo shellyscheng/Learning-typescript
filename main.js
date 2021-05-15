@@ -19,3 +19,12 @@ var c;
 var d;
 var e; //array of numbers or let e: number[] = [1, 2, 3];
 var f = [1, true, 'a', false]; //not good practice, but it's possible
+//enumeration
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+;
+var backgroundColor = Color.Red;
