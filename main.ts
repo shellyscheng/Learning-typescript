@@ -1,9 +1,9 @@
-function log(message) {
-    console.log(message);
+function log(messageExample) {
+    console.log(messageExample);
 }
 
-var message = "Hello World";
-log(message)
+var messageExample = "Hello World";
+log(messageExample)
 
 
 //in JS, the scope of var variable declared is the nearest function
@@ -33,3 +33,14 @@ let f: any[] = [1, true, 'a', false]; //not good practice, but it's possible
 //Number is optional, but better practice
 enum Color {Red = 0, Green = 1, Blue = 2, Purple = 3};
 let backgroundColor = Color.Red;
+
+
+//Type Assertion, won't change object in memory
+let message;
+message = 'abc';
+
+let endsWithC = (<string>message).endsWith('c'); //more common
+let alternativeWay = (message as string).endsWith('c');
+
+
+//Arrow function
