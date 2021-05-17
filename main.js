@@ -49,9 +49,14 @@ let doLog = (message) => console.log(message);
 class Point {
     //method
     draw() {
-        //...
+        console.log('X: ' + this.x + ', Y:' + this.y);
     }
     getDistance() {
         //...
     }
 }
+//explicity allocate memory to it
+let point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();

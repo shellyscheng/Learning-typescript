@@ -56,6 +56,7 @@ let doLog = (message) => console.log(message);
 //     draw: () => void 
 // }
 
+
 //Apply cohesion principle, change interface to class
 class Point {
     x: number; //fields
@@ -63,10 +64,16 @@ class Point {
     
     //method
     draw() {
-        //...
+       console.log('X: ' + this.x + ', Y:' + this.y)
     } 
 
     getDistance() {
         //...
     }
 }
+
+//Object of customize group, needs explicity allocate memory to it
+let point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
