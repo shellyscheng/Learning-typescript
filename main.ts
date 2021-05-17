@@ -61,19 +61,18 @@ let doLog = (message) => console.log(message);
 class Point {
     x: number; //fields
     y: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
     
     //method
     draw() {
        console.log('X: ' + this.x + ', Y:' + this.y)
     } 
-
-    getDistance() {
-        //...
-    }
 }
 
 //Object of customize group, needs explicity allocate memory to it
-let point = new Point();
-point.x = 1;
-point.y = 2;
-point.draw();
+let point = new Point(1, 2);
+point.draw(); 

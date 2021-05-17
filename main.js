@@ -47,16 +47,15 @@ let doLog = (message) => console.log(message);
 // }
 //Apply cohesion principle, change interface to class
 class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
     //method
     draw() {
         console.log('X: ' + this.x + ', Y:' + this.y);
     }
-    getDistance() {
-        //...
-    }
 }
-//explicity allocate memory to it
-let point = new Point();
-point.x = 1;
-point.y = 2;
+//Object of customize group, needs explicity allocate memory to it
+let point = new Point(1, 2);
 point.draw();
