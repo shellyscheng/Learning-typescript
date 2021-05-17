@@ -37,3 +37,21 @@ let endsWithC = message.endsWith('c'); //more common
 let alternativeWay = message.endsWith('c');
 //Arrow function
 let doLog = (message) => console.log(message);
+//custom types in typescript
+//Capitalize P: Pascal naming convention
+//in interface, we can't have implementation, only signature of a function
+// interface Point {
+//     x: number,
+//     y: number,
+//     draw: () => void 
+// }
+//Apply cohesion principle, change interface to class
+class Point {
+    //method
+    draw() {
+        //...
+    }
+    getDistance() {
+        //...
+    }
+}

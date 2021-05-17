@@ -45,3 +45,28 @@ let alternativeWay = (message as string).endsWith('c');
 
 //Arrow function
 let doLog = (message) => console.log(message);
+
+
+//custom types in typescript
+//Capitalize P: Pascal naming convention
+//in interface, we can't have implementation, only signature of a function
+// interface Point {
+//     x: number,
+//     y: number,
+//     draw: () => void 
+// }
+
+//Apply cohesion principle, change interface to class
+class Point {
+    x: number; //fields
+    y: number;
+    
+    //method
+    draw() {
+        //...
+    } 
+
+    getDistance() {
+        //...
+    }
+}
