@@ -36,3 +36,4 @@ message = 'abc';
 let endsWithC = message.endsWith('c'); //more common
 let alternativeWay = message.endsWith('c');
 //Arrow function
+let doLog = (message) => console.log(message);

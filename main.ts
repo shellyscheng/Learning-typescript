@@ -44,3 +44,4 @@ let alternativeWay = (message as string).endsWith('c');
 
 
 //Arrow function
+let doLog = (message) => console.log(message);
