@@ -46,6 +46,7 @@ let doLog = (message) => console.log(message);
 //     draw: () => void 
 // }
 //Apply cohesion principle, change interface to class
+//private: access modifier. No longer accessible outside the class
 class Point {
     //optional parameter, parameter on the right side of ? should also be ?
     constructor(x, y) {
