@@ -60,21 +60,35 @@ let doLog = (message) => console.log(message);
 //Apply cohesion principle, change interface to class
 //private: access modifier. No longer accessible outside the class
 class Point {
-    private x: number; //fields
-    private y: number;
-
     //optional parameter, parameter on the right side of ? should also be ?
-    constructor(x?: number, y?: number) {
-        this.x = x;
-        this.y = y;
+    constructor(private _x?: number, private _y?: number) {
     }
     
     //method
     draw() {
-       console.log('X: ' + this.x + ', Y:' + this.y)
-    } 
+       console.log('X: ' + this._x + ', Y:' + this._y)
+    }
+
+    //get and set property 
+    //getter
+    get x() {
+        return this._x;
+    }
+
+    //setter
+    set x(value) {
+        if (value < 0) {
+            throw new Error('value cannot be less than 0.');
+        }
+
+        this._x = value;
+    }
 }
 
 //Object of customize group, needs explicity allocate memory to it
-let point = new Point();
-point.draw(); 
+let point = new Point(1, 2);
+let x = point.x;
+point.x = 10;
+console.log(point.x);
+
+//property looks like a field from outside, but is like a method in the class (getter, setter, or a combination of both)

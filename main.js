@@ -48,8 +48,12 @@ let doLog = (message) => console.log(message);
 //Apply cohesion principle, change interface to class
 //private: access modifier. No longer accessible outside the class
 class Point {
+    // private x: number; //fields
+    // private y: number;
     //optional parameter, parameter on the right side of ? should also be ?
     constructor(x, y) {
+        this.x = x;
+        this.y = y;
         this.x = x;
         this.y = y;
     }
@@ -57,7 +61,19 @@ class Point {
     draw() {
         console.log('X: ' + this.x + ', Y:' + this.y);
     }
+    //get and set property 
+    get X() {
+        return this.x;
+    }
+    set X(value) {
+        if (value < 0) {
+            throw new Error('value cannot be less than 0.');
+        }
+        this.x = value;
+    }
 }
 //Object of customize group, needs explicity allocate memory to it
-let point = new Point();
-point.draw();
+let point = new Point(1, 2);
+let x = point.x;
+point.x = 10;
+console.log(point.x);
