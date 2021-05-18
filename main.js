@@ -47,6 +47,7 @@ let doLog = (message) => console.log(message);
 // }
 //Apply cohesion principle, change interface to class
 class Point {
+    //optional parameter, parameter on the right side of ? should also be ?
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -57,5 +58,5 @@ class Point {
     }
 }
 //Object of customize group, needs explicity allocate memory to it
-let point = new Point(1, 2);
+let point = new Point();
 point.draw();

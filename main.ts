@@ -62,7 +62,8 @@ class Point {
     x: number; //fields
     y: number;
 
-    constructor(x: number, y: number) {
+    //optional parameter, parameter on the right side of ? should also be ?
+    constructor(x?: number, y?: number) {
         this.x = x;
         this.y = y;
     }
@@ -74,5 +75,5 @@ class Point {
 }
 
 //Object of customize group, needs explicity allocate memory to it
-let point = new Point(1, 2);
+let point = new Point();
 point.draw(); 
